@@ -12,7 +12,7 @@ gem 'devise'
 # gem 'bootstrap-sass', '~> 3.2.0', require: false
 # gem 'rails-assets-jquery', require: false
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass', '~> 3.4.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+# gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -44,3 +44,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'meta-tags'
+
+
+group :development do
+  gem 'capobvious', '0.3.pre24'
+  gem 'thin'
+end
+
+group :production do
+  gem 'unicorn'
+end
