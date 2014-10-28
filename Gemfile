@@ -44,12 +44,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rspec'
 gem 'meta-tags'
 
 
 group :development do
   gem 'capobvious', '0.3.pre24'
   gem 'thin'
+  gem 'binding_of_caller'
 end
 
 group :production do
