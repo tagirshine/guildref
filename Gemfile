@@ -39,13 +39,15 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rspec'
+
+
 gem 'meta-tags'
+
 
 
 group :development do
@@ -57,3 +59,14 @@ end
 group :production do
   gem 'unicorn'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+gem 'capybara'
+gem 'simple_form'
+gem 'jquery-ui-rails'
+gem 'paperclip', '~> 4.2'
+gem 'rspec-rails'
+gem 'nokogiri'

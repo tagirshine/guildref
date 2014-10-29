@@ -38,9 +38,21 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-rails (1.0.0)
+      capistrano
     capobvious (0.3.pre24)
       capistrano (~> 2.15.4)
       rvm-capistrano
+    capybara (2.4.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -49,6 +61,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     daemons (1.1.9)
+    database_cleaner (1.3.0)
     debug_inspector (0.0.2)
     devise (3.4.0)
       bcrypt (~> 3.0)
@@ -67,6 +80,8 @@ GEM
     jbuilder (2.2.4)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jquery-ui-rails (5.0.2)
+      railties (>= 3.2.16)
     json (1.8.1)
     kgio (2.9.2)
     mail (2.6.1)
@@ -74,6 +89,7 @@ GEM
     meta-tags (2.0.0)
       actionpack (>= 3.0.0)
     mime-types (2.4.3)
+    mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
     net-scp (1.2.1)
@@ -83,7 +99,14 @@ GEM
     net-ssh (2.9.1)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
+    paperclip (4.2.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -108,16 +131,20 @@ GEM
       json (~> 1.4)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
-    rspec (3.1.0)
-      rspec-core (~> 3.1.0)
-      rspec-expectations (~> 3.1.0)
-      rspec-mocks (~> 3.1.0)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.1.0)
     rspec-mocks (3.1.3)
+      rspec-support (~> 3.1.0)
+    rspec-rails (3.1.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.1.0)
+      rspec-expectations (~> 3.1.0)
+      rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
     rvm-capistrano (1.5.4)
@@ -126,6 +153,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -161,21 +191,30 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   binding_of_caller
+  capistrano-rails
   capobvious (= 0.3.pre24)
+  capybara
   coffee-rails (~> 4.0.0)
+  database_cleaner
   devise
   jbuilder (~> 2.0)
+  jquery-ui-rails
   meta-tags
+  nokogiri
+  paperclip (~> 4.2)
   rails (= 4.1.6)
-  rspec
+  rspec-rails
   sass (~> 3.4.6)
   sdoc (~> 0.4.0)
+  simple_form
   slim
   spring
   sqlite3
